@@ -5,15 +5,12 @@ const exec = require('child_process').exec;
 
 var script = exec('sh getIp.sh',
         (error, stdout, stderr) => {
-            console.log(`${stdout}`);
+            //in case there is an error
             console.log(`${stderr}`);
-
             var regEx= /inet\s([\d|\.]+)/i;
             var ip = regEx.exec(stdout)[1];
-            console.log(ip);
             ncp.copy(ip,function(response){
-                console.log(response)
-                console.log('coppied to clipboard');
+                console.log(`coppied ${ip} to clipboard`);
                 process.exit(1);
             });
             if (error !== null) {
