@@ -1,0 +1,14 @@
+{
+  "name": "translate-language-name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "osvaldom",
+  "license": "ISC",
+  "dependencies": {
+    "yandex-translate-api": "^1.0.1"
+  }
+}
